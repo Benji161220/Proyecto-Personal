@@ -43,6 +43,32 @@ class MainActivity : ComponentActivity() {
     @Preview
     @Composable
     fun ProyectoApp(){
+        var currentStep by remember { mutableStateOf(1) }
+        var squeezesLeft by remember { mutableStateOf(0)}
+        Surface(
+            modifier = Modifier.fillMaxSize(),
+            color = MaterialTheme.colorScheme.background
+        ) {
+            when (currentStep) {
+                1-> {
+                    Column (
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Center,
+                        modifier = Modifier.fillMaxSize()
+                    ){
+                        Text("Haz clic en la galleta para romperla")
+                        Spacer(modifier = Modifier.height(32.dp))
+                        Image(
+                            painter = painterResource(R.drawable.galleta1),
+                            contentDescription = "galleta",
 
+                        )
+                    }
+                }
+                2->{
+
+                }
+            }
+        }
     }
 }
