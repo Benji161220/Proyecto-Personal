@@ -44,7 +44,7 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun ProyectoApp(){
         var currentStep by remember { mutableStateOf(1) }
-        var squeezesLeft by remember { mutableStateOf(0)}
+        var squeezesLeft by remember { mutableStateOf(200)}
         Surface(
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background
@@ -61,7 +61,13 @@ class MainActivity : ComponentActivity() {
                         Image(
                             painter = painterResource(R.drawable.galleta1),
                             contentDescription = "galleta",
-
+                            modifier = Modifier.wrapContentSize()
+                                .clickable {
+                                    squeezesLeft--
+                                    if (squeezesLeft <= 190) {
+                                        currentStep = 2
+                                    }
+                                }
                         )
                     }
                 }
@@ -76,11 +82,17 @@ class MainActivity : ComponentActivity() {
                         Image(
                             painter = painterResource(R.drawable.galleta2),
                             contentDescription = "galleta2",
-
+                            modifier = Modifier.wrapContentSize()
+                                .clickable {
+                                    squeezesLeft--
+                                    if (squeezesLeft <= 170) {
+                                        currentStep = 3
+                                    }
+                                }
                             )
                     }
                 }
-                2->{
+                3->{
                     Column (
                         horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.Center,
@@ -91,11 +103,17 @@ class MainActivity : ComponentActivity() {
                         Image(
                             painter = painterResource(R.drawable.galleta3),
                             contentDescription = "galleta3",
-
+                            modifier = Modifier.wrapContentSize()
+                                .clickable {
+                                    squeezesLeft--
+                                    if (squeezesLeft <= 140) {
+                                        currentStep = 4
+                                    }
+                                }
                             )
                     }
                 }
-                2->{
+                4->{
                     Column (
                         horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.Center,
@@ -106,11 +124,17 @@ class MainActivity : ComponentActivity() {
                         Image(
                             painter = painterResource(R.drawable.galleta4),
                             contentDescription = "galleta4",
-
+                            modifier = Modifier.wrapContentSize()
+                                .clickable {
+                                    squeezesLeft--
+                                    if (squeezesLeft <= 90) {
+                                        currentStep = 5
+                                    }
+                                }
                             )
                     }
                 }
-                2->{
+                5->{
                     Column (
                         horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.Center,
@@ -121,11 +145,17 @@ class MainActivity : ComponentActivity() {
                         Image(
                             painter = painterResource(R.drawable.galleta5),
                             contentDescription = "galleta5",
-
+                            modifier = Modifier.wrapContentSize()
+                                .clickable {
+                                    squeezesLeft--
+                                    if (squeezesLeft <= 0) {
+                                        currentStep = 6
+                                    }
+                                }
                             )
                     }
                 }
-                2->{
+                6->{
                     Column (
                         horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.Center,
