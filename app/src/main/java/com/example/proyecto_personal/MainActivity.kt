@@ -66,7 +66,79 @@ class MainActivity : ComponentActivity() {
                     }
                 }
                 2->{
+                    Column (
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Center,
+                        modifier = Modifier.fillMaxSize()
+                    ){
+                        Text("Ya empieza a quebrarse")
+                        Spacer(modifier = Modifier.height(32.dp))
+                        Image(
+                            painter = painterResource(R.drawable.galleta2),
+                            contentDescription = "galleta2",
 
+                            )
+                    }
+                }
+                2->{
+                    Column (
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Center,
+                        modifier = Modifier.fillMaxSize()
+                    ){
+                        Text("¡Cada vez se está quebrando más!")
+                        Spacer(modifier = Modifier.height(32.dp))
+                        Image(
+                            painter = painterResource(R.drawable.galleta3),
+                            contentDescription = "galleta3",
+
+                            )
+                    }
+                }
+                2->{
+                    Column (
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Center,
+                        modifier = Modifier.fillMaxSize()
+                    ){
+                        Text("¡Vamos ya queda poco!")
+                        Spacer(modifier = Modifier.height(32.dp))
+                        Image(
+                            painter = painterResource(R.drawable.galleta4),
+                            contentDescription = "galleta4",
+
+                            )
+                    }
+                }
+                2->{
+                    Column (
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Center,
+                        modifier = Modifier.fillMaxSize()
+                    ){
+                        Text("¡Ya esta a punto de quebrarse!")
+                        Spacer(modifier = Modifier.height(32.dp))
+                        Image(
+                            painter = painterResource(R.drawable.galleta5),
+                            contentDescription = "galleta5",
+
+                            )
+                    }
+                }
+                2->{
+                    Column (
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Center,
+                        modifier = Modifier.fillMaxSize()
+                    ){
+                        Text("¡Enhorabuena, has destruido la galleta!")
+                        Spacer(modifier = Modifier.height(32.dp))
+                        Image(
+                            painter = painterResource(R.drawable.galleta6),
+                            contentDescription = "galleta6",
+
+                            )
+                    }
                 }
             }
         }
